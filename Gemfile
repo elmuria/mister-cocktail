@@ -51,4 +51,10 @@ gem 'font-awesome-sass', '~> 4.2.0'
 
 gem 'bootstrap_form'
 
+ruby '2.2.0'
+
+gem 'rails_12factor', group: :production
+
+gem 'puma',           group: :production
+
 
