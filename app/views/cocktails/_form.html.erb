@@ -10,7 +10,6 @@
   <% end %>
   <p>Add your cocktail name:</p>
     <%= f.text_field :name %>
-    <br>
-    <%= f.submit "add a cocktail" %>
+    <%= f.submit "add a cocktail", {class: "btn btn-primary"} %>
   <!-- [...] all the fields -->
 <% end %>
