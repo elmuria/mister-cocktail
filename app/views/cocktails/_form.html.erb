@@ -1,0 +1,16 @@
+<%= form_for(cocktail) do |f| %>
+  <% if cocktail.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% cocktail.errors.full_messages.each do |message| %>
+        <li class="red"><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>Add your cocktail name:</p>
+    <%= f.text_field :name %>
+    <br>
+    <%= f.submit "add a cocktail" %>
+  <!-- [...] all the fields -->
+<% end %>

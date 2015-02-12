@@ -1,0 +1,19 @@
+<%= form_for([cocktail, dose]) do |f| %>
+  <% if dose.errors.any? %>
+    <div id="error_explanation">
+      <ul>
+      <% dose.errors.full_messages.each do |message| %>
+        <li class="red"><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <p>Add your ingredient:</p>
+  <%= f.collection_select(:ingredient_id, Ingredient.all, :id, :name) %>
+  <p>Add your description:</p>
+    <%= f.text_field :description %>
+    <br>
+    <br>
+    <%= f.submit "Add a dose" %>
+  <!-- [...] all the fields -->
+<% end %>
